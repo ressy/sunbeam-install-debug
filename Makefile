@@ -17,8 +17,8 @@ sunbeam-$(SUNBEAM):
 anaconda3/envs/sunbeam: sunbeam-$(SUNBEAM) anaconda3
 	env
 	cd $< &&\
-	       	../setup_wrapper.sh ./install.sh -d && \
-		../setup_wrapper.sh tests/run_tests.bash -e sunbeam
+	       	../conda_wrapper.sh ./install.sh -d && \
+		../conda_wrapper.sh tests/run_tests.bash -e sunbeam
 
 clean:
 	rm -f $(ANACONDA).sh
