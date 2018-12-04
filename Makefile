@@ -16,6 +16,8 @@ sunbeam-$(SUNBEAM):
 
 anaconda3/envs/sunbeam: sunbeam-$(SUNBEAM) anaconda3
 	env
+	./conda_wrapper.sh conda info
+	./conda_wrapper.sh conda config --show
 	cd $< &&\
 	       	../conda_wrapper.sh ./install.sh -d && \
 		../conda_wrapper.sh tests/run_tests.bash -e sunbeam
@@ -24,3 +26,4 @@ clean:
 	rm -f $(ANACONDA).sh
 	rm -rf anaconda3/
 	rm -rf sunbeam-$(SUNBEAM)/
+	rm -rf .conda/ .cache/ .pip/ tmp/
