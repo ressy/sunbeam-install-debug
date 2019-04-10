@@ -6,7 +6,7 @@ SUNBEAM  ?= stable
 all: anaconda3/envs/sunbeam
 
 $(ANACONDA).sh:
-	wget -q https://repo.anaconda.com/archive/$@
+	wget -q https://repo.anaconda.com/archive/$@ || wget -q https://repo.anaconda.com/miniconda/$@
 
 anaconda3: $(ANACONDA).sh
 	bash $< -b -p $@
