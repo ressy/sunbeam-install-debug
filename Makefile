@@ -1,6 +1,6 @@
 # Try to create and test a sunbeam intallation, using a local copy of Anaconda.
 
-ANACONDA ?= Anaconda3-4.3.1-Linux-x86_64
+ANACONDA ?= Miniconda3-latest-Linux-x86_64
 SUNBEAM  ?= stable
 
 all: anaconda3/envs/sunbeam
